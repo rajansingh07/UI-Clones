@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Linkly</title>
+  </head>
+  <body class="bg-[url(bg.jpg)] bg-cover bg-center">
+    <nav class="px-4 md:px-10 py-5">
+      <div class="mx-auto max-w-7xl flex items-center justify-between">
+        <h1
+          class="inline-block text-3xl font-extrabold cursor-pointer bg-gradient-to-r from-[#EB568E] via-[#144EE3] to-[#2B6FFF] bg-clip-text text-transparent"
+        >
+          Linkly
+        </h1>
+
+        <div class="hidden md:flex justify-end space-x-3 mr-3">
+          <button
+            class="flex justify-center items-center cursor-pointer font-bold text-sm gap-2 rounded-full bg-[#181E29] text-white h-12 w-30 border border-gray-700 hover:bg-[#20293A] transition-all duration-300"
+          >
+            Login
+            <img
+              src="https://img.icons8.com/?size=100&id=rP41Qs5B77oi&format=png&color=ffffff"
+              alt=""
+              class="h-5 w-5"
+            />
+          </button>
+
+          <button
+            class="text-sm text-white bg-[#144EE3] rounded-full font-bold h-12 w-38 flex justify-center items-center shadow-[7px_5px_16px_0px_#2B6FFF] hover:bg-[#2B6FFF] hover:shadow-[7px_5px_16px_0px_#123fb3] transition-all duration-300"
+          >
+            Register Now
+          </button>
+        </div>
+
+        <button id="menu-btn" class="md:hidden text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="hidden md:hidden mt-5 flex flex-col gap-3">
+        <button
+          class="flex justify-center items-center cursor-pointer font-bold text-sm gap-2 rounded-full bg-[#181E29] text-white h-12 border border-gray-700 hover:bg-[#20293A] transition-all duration-300"
+        >
+          Login
+          <img
+            src="https://img.icons8.com/?size=100&id=rP41Qs5B77oi&format=png&color=ffffff"
+            alt=""
+            class="h-5 w-5"
+          />
+        </button>
+
+        <button
+          class="text-sm text-white bg-[#144EE3] rounded-full font-bold h-12 flex justify-center items-center shadow-[7px_5px_16px_0px_#2B6FFF] hover:bg-[#2B6FFF] hover:shadow-[7px_5px_16px_0px_#123fb3] transition-all duration-300"
+        >
+          Register Now
+        </button>
+      </div>
+    </nav>
+    <section class="py-15 md:py-15">
+      <div class="flex text-center flex-col justify-center items-center px-4">
+        <h1
+          class="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#EB568E] via-[#144EE3] to-[#2B6FFF] bg-clip-text text-transparent md:h-18"
+        >
+          Shorten Your Long Links :)
+        </h1>
+        <p class="text-gray-400 max-w-xl md:max-w-3xl mt-6 md:mt-1">
+          Linkly is an efficient and easy-to-use URL shortening service that
+          streamlines your online experience.
+        </p>
+        <div
+          class="bg-[#181E29] h-15 w-170 rounded-full mt-10 flex items-center justify-center px-1 gap-3 border-3 border-solid border-gray-700"
+        >
+          <img
+            src="https://img.icons8.com/?size=100&id=91&format=png&color=ffffff"
+            alt="URL"
+            class="h-4 w-4 flex mx-3"
+          />
+          <input
+            type="text"
+            placeholder="Enter the link here"
+            class="flex-1 min-w-0 placeholder:text-gray-400 text-gray-400 outline-none"
+          />
+          <button
+            class="h-12 w-40 rounded-full bg-[#144EE3] cursor-pointer flex items-center justify-center text-sm font-bold text-white shadow-[5px_5px_10px_0px_rgba(20,78,227,0.5)] hover:bg-[#2B6FFF] hover:shadow-[5px_5px_10px_0px_#2B6FFF] transition duration-300"
+          >
+            Shorten Now!
+          </button>
+        </div>
+        <div class="flex justify-center items-center py-8">
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="peer sr-only" />
+
+            <div
+              class="h-7 w-12 rounded-full bg-gray-600 transition-colors duration-300 peer-checked:bg-gray-600"
+            ></div>
+
+            <div
+              class="absolute left-1 top-1 h-5 w-5 rounded-full bg-white transition-transform duration-300 peer-checked:translate-x-5 peer-checked:bg-[#2B6FFF]"
+            ></div>
+          </label>
+          <span class="px-5 text-gray-400">Auto Paste from Clipboard</span>
+        </div>
+        <p class="text-center text-gray-400">
+          You can create <span class="text-pink-400">05</span> more links.
+          Register Now to enjoy Unlimited usage
+        </p>
+      </div>
+    </section>
+    <section class="py-1">
+      <!-- Header line -->
+      <div class="mx-auto max-w-7xl">
+        <div
+          class="grid grid-cols-6 items-center rounded-t-3xl bg-[#181E29] py-5 text-center text-white"
+        >
+          <div>Short Link</div>
+          <div>Original Link</div>
+          <div>QR Code</div>
+          <div>Clicks</div>
+          <div>Status</div>
+          <div>Date</div>
+        </div>
+        <!-- First row -->
+        <div class="grid grid-cols-6 items-center bg-[#141d2e] my-1 py-2 px-5">
+          <div class="flex items-center gap-2 min-w-0">
+            <div class="text-white">https://linkly.com/Bn41a</div>
+            <img
+              src="https://img.icons8.com/?size=100&id=AGLXTiVVflkt&format=png&color=ffffff"
+              alt=""
+              class="h-6 w-6 cursor-pointer"
+            />
+          </div>
+          <div class="flex flex-row items-center justify-center ml-4 gap-2">
+            <img
+              src="https://img.icons8.com/?size=100&id=63306&format=png&color=000000"
+              alt=""
+              class="h-7 w-7"
+            />
+            <span class="truncate text-white">
+              https://www.twitter.com/...
+            </span>
+          </div>
+          <div class="px-18">
+            <img
+              src="https://img.icons8.com/?size=100&id=zXSWCwWtxBKr&format=png&color=ffffff"
+              alt=""
+              class="h-12 w-12"
+            />
+          </div>
+          <div class="px-22 text-white">1380</div>
+          <div class="px-22 text-white">Active</div>
+          <div class="px-20 text-white">13/03/2026</div>
+        </div>
+        <!-- second line -->
+        <div class="grid grid-cols-6 items-center bg-[#141d2e] my-1 py-2 px-5">
+          <div class="flex items-center gap-2 min-w-0">
+            <div class="text-white">https://linkly.com/Db535</div>
+            <img
+              src="https://img.icons8.com/?size=100&id=AGLXTiVVflkt&format=png&color=ffffff"
+              alt=""
+              class="h-6 w-6 cursor-pointer"
+            />
+          </div>
+          <div class="flex flex-row items-center justify-center ml-4 gap-2">
+            <img
+              src="https://img.icons8.com/?size=100&id=qLVB1tIe9Ts9&format=png&color=000000"
+              alt=""
+              class="h-7 w-7"
+            />
+            <span class="truncate text-white">
+              https://www.youtube.com/...
+            </span>
+          </div>
+          <div class="px-18">
+            <img
+              src="https://img.icons8.com/?size=100&id=zXSWCwWtxBKr&format=png&color=ffffff"
+              alt=""
+              class="h-12 w-12"
+            />
+          </div>
+          <div class="px-22 text-white">1026</div>
+          <div class="px-22 text-white">Active</div>
+          <div class="px-20 text-white">30/04/2026</div>
+        </div>
+        <!-- Third line -->
+        <div class="grid grid-cols-6 items-center bg-[#141d2e] my-1 py-2 px-5">
+          <div class="flex items-center gap-2 min-w-0">
+            <div class="text-white">https://linkly.com/Sp026</div>
+            <img
+              src="https://img.icons8.com/?size=100&id=AGLXTiVVflkt&format=png&color=ffffff"
+              alt=""
+              class="h-6 w-6 cursor-pointer"
+            />
+          </div>
+          <div class="flex flex-row items-center justify-center ml-4 gap-2">
+            <img
+              src="https://img.icons8.com/?size=100&id=63316&format=png&color=000000"
+              alt=""
+              class="h-7 w-7"
+            />
+            <span class="truncate text-white">
+              https://www.spotify.com/...
+            </span>
+          </div>
+          <div class="px-18">
+            <img
+              src="https://img.icons8.com/?size=100&id=zXSWCwWtxBKr&format=png&color=ffffff"
+              alt=""
+              class="h-12 w-12"
+            />
+          </div>
+          <div class="px-22 text-white">2065</div>
+          <div class="px-22 text-white">Active</div>
+          <div class="px-20 text-white">15/05/2026</div>
+        </div>
+        <!-- Fourth line -->
+        <div class="grid grid-cols-6 items-center bg-[#141d2e] my-1 py-2 px-5">
+          <div class="flex items-center gap-2 min-w-0">
+            <div class="text-white/10">https://linkly.com/Sp026</div>
+            <img
+              src="https://img.icons8.com/?size=100&id=AGLXTiVVflkt&format=png&color=ffffff"
+              alt=""
+              class="h-6 w-6 cursor-pointer opacity-10"
+            />
+          </div>
+          <div class="flex flex-row items-center justify-center ml-4 gap-2">
+            <img
+              src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000"
+              alt=""
+              class="h-7 w-7 opacity-10 drop-shadow-[0_0_30px_rgba(53,60,74,0.8)]"
+            />
+            <span class="truncate text-white/10">
+              https://www.instagram.com/...
+            </span>
+          </div>
+          <div class="px-18">
+            <img
+              src="https://img.icons8.com/?size=100&id=zXSWCwWtxBKr&format=png&color=ffffff"
+              alt=""
+              class="h-12 w-12 opacity-40"
+            />
+          </div>
+          <div class="px-22 text-white/10">1627</div>
+          <div class="px-22 text-white/10">Active</div>
+          <div class="px-20 text-white/10">27/05/2026</div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="-mt-19 text-center mx-auto max-w-7xl bg-[#353C4A]/89 px-8 py-10 rounded-b-lg"
+    >
+      <p>
+        <span class="underline text-[#0048ff] font-bold cursor-pointer">Register Now</span> to
+        enjoy Unlimited History
+      </p>
+    </div>
+  </body>
+</html>
